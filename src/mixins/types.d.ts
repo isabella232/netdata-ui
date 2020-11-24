@@ -1,16 +1,18 @@
-import { CSSProperties } from "react"
-
 export interface StyledComponentProps {
   as?: any
 }
 
-export type DimensionsType = CSSProperties | { min?: CSSProperties; max?: CSSProperties }
+export type CSSPropertiesValueType = number | string
+
+export type DimensionsType =
+  | CSSPropertiesValueType
+  | { min?: CSSPropertiesValueType; max?: CSSPropertiesValueType }
 
 export type MultiplierType = number
 
 export type ColorType = string[] | string
 
-type MarginType =
+export type MarginType =
   | [MultiplierType]
   | [MultiplierType, MultiplierType]
   | [MultiplierType, MultiplierType, MultiplierType]
